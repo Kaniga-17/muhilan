@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Dynamic Page</title>
+    <style>
+        body{
+            text-align:center;
+            margin-top:60px;
+            font-family: Arial;
+        }
+
+        #text{
+            color:blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Dynamic Page using JavaScript</h2>
+    <p id="text">Press buttons to change me</p>
+
+    <button onclick="changeText()">Change Text</button>
+    <button onclick="changeStyle()">Change Color</button>
+    <button onclick="goBack()">Reset</button>
+
+    <script>
+
+        function changeText(){
+            document.getElementById("text").innerHTML = "Text is Updated!";
+        }
+
+        function changeStyle(){
+            document.getElementById("text").style.color = "green";
+        }
+
+        function goBack(){
+            document.getElementById("text").innerHTML = "Press buttons to change me";
+            document.getElementById("text").style.color = "blue";
+        }
+
+    </script>
+
+</body>
+</html>
